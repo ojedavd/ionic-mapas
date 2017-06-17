@@ -21,11 +21,9 @@ export class HomePage {
  
   ionViewDidLoad(){
       this.subscription = Observable.interval(10000).subscribe(x => {
-      // the number 1000 is on miliseconds so every second is going to have an iteration of what is inside this code.
-        console.log (i);
-        i++;
+      this.loadMap();
       });    
-    this.loadMap();
+
   }
  
   loadMap(){
@@ -36,7 +34,7 @@ export class HomePage {
  
       let mapOptions = {
         center: latLng,
-        zoom: 20,
+        zoom: 17,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
  
